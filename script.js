@@ -15,13 +15,13 @@ articleContainer.addEventListener('mouseup', function(event) {
     twitterButton.addEventListener('click', function(event) {
       event.preventDefault();
       window.open(event.target.href, 'Share on Twitter', 'width=550,height=450');
-      const ele = document.getElementById('custom-menu');
-      ele.remove()
+      
     });
-
+    menu.addEventListener('click',function(e){
+        menu.remove();
+    });
     menu.appendChild(twitterButton);
     const container = event.target.closest('.article-container');
-
     container.appendChild(menu);
   }
 });

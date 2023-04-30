@@ -75,11 +75,7 @@
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
   }
-  
-  .article-container a:last-child {
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
+
   
   .article-container a svg {
     display: inline-block;
@@ -87,12 +83,18 @@
     margin-right: 5px;
   }
   
-  .article-container a.twitter-share {
+  .article-container a:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #1da1f2;
+    width: 100px;
+    margin: 10px;
     color: #fff;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
   
   .article-container a.twitter-share:hover {
     background-color: #0c8ecf;
   }
-  
