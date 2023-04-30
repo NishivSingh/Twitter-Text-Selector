@@ -20,20 +20,9 @@ articleContainer.addEventListener('mouseup', function(event) {
     });
 
     menu.appendChild(twitterButton);
+    const container = event.target.closest('.article-container');
 
-    // Get the bounding box of the selected text range
-    const range = window.getSelection().getRangeAt(0);
-    const rect = range.getBoundingClientRect();
-
-    // Calculate the position of the menu relative to the selected text range
-    const left = rect.left + articleContainer.scrollLeft;
-    const top = rect.bottom + articleContainer.scrollTop;
-
-    // Position the menu
-    menu.style.left = left + 'px';
-    menu.style.top = top + 'px';
-
-    document.body.appendChild(menu);
+    container.appendChild(menu);
   }
 });
 
